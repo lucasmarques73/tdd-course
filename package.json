@@ -6,10 +6,12 @@
   "scripts": {
     "lint": "eslint src/*.js",
     "prepush": "npm run lint",
-    "test": "mocha tests/**/*.spec.js",
-    "test:tdd": "mocha tests/**/*.spec.js --watch"
+    "test": "mocha tests/**/*.spec.js --require babel-register",
+    "test:tdd": "npm run test -- --watch"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.3.2",
+    "babel-register": "^6.24.0",
     "chai": "^3.5.0",
     "eslint": "^3.7.1",
     "eslint-config-airbnb": "^12.0.0",
