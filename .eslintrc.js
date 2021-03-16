@@ -1,8 +1,16 @@
 module.exports = {
-  "extends": "airbnb",
-  "plugins": [
-      "react",
-      "jsx-a11y",
-      "import"
-  ]
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+  },
+  extends: [
+    'airbnb-base',
+  ],
+  parserOptions: {
+    ecmaVersion: 12,
+    sourceType: 'module',
+  },
+  rules: {
+  },
 };
